@@ -13,21 +13,6 @@ Each hook includes a demo component showcasing how to use it effectively in real
 
 ---
 
-## 📁 Project Structure
-├── components/
-│ ├── LocalStorageDemo.tsx
-│ ├── DebounceDemo.tsx
-│ ├── ClickOutsideDemo.tsx
-│ └── WindowSizeDemo.tsx
-├── hooks/
-│ ├── useLocalStorage.ts
-│ ├── useDebounce.ts
-│ ├── useClickOutside.ts
-│ └── useWindowSize.ts
-
-
----
-
 ## 🧩 Custom Hooks Overview
 
 This project includes several reusable custom React hooks to enhance UI interactivity and state handling.
@@ -44,9 +29,7 @@ Triggers a callback when the user clicks or touches outside the referenced eleme
 ### 🔸 `useWindowSize()`
 Tracks and returns the current window dimensions (`width` and `height`), updating in real-time on window resize.
 
-
 ---
-
 
 # Clone the repo
 git clone https://github.com/your-username/react-hooks-playground.git

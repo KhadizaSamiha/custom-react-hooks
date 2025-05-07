@@ -3,12 +3,15 @@ import LocalStorageDemo from "./components/LocalStorageDemo";
 import DebounceDemo from "./components/DebounceDemo";
 import ClickOutsideDemo from "./components/ClickOutsideDemo";
 import WindowSizeDemo from "./components/WindowSizeDemo";
+import { FaDatabase, FaMousePointer, FaSearch } from "react-icons/fa";
+import { AiOutlineFullscreen } from "react-icons/ai";
+import { FiTool } from "react-icons/fi";
 
 const tabs = [
-  { label: "useLocalStorage", value: "local" },
-  { label: "useDebounce", value: "debounce" },
-  { label: "useClickOutside", value: "click" },
-  { label: "useWindowSize", value: "window" },
+  { label: "useLocalStorage", value: "local", icon: <FaDatabase /> },
+  { label: "useDebounce", value: "debounce", icon: <FaSearch /> },
+  { label: "useClickOutside", value: "click", icon: <FaMousePointer /> },
+  { label: "useWindowSize", value: "window", icon: <AiOutlineFullscreen /> },
 ];
 
 export default function App() {
@@ -32,9 +35,12 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 px-4 py-10 md:px-8 lg:px-20">
       <div className="w-full max-w-5xl mx-auto">
-        <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-gray-800">
-          Custom Hook Demos
-        </h1>
+        <div className="flex items-center justify-center mb-8 text-gray-700">
+          <FiTool className="text-4xl mt-2" />
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+            Custom React Hook
+          </h1>
+        </div>
 
         {/* Tabs */}
         <div className="flex flex-col md:flex-row justify-center gap-2 sm:gap-3 md:gap-4 rounded-xl bg-white p-2 sm:p-3 shadow-md mb-8">
@@ -42,12 +48,13 @@ export default function App() {
             <button
               key={tab.value}
               onClick={() => setActiveTab(tab.value)}
-              className={`px-4 py-2 sm:px-5 sm:py-3 text-sm sm:text-base md:text-lg rounded-lg font-medium transition-colors duration-300 ${
+              className={`flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-3 text-sm sm:text-base md:text-lg rounded-lg font-medium transition-colors duration-300 ${
                 activeTab === tab.value
-                  ? "bg-black text-white shadow"
+                  ? "bg-gray-700 text-white shadow"
                   : "text-gray-600 hover:bg-gray-100"
               }`}
             >
+              <span className="text-xl">{tab.icon}</span>
               {tab.label}
             </button>
           ))}
