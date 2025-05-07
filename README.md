@@ -31,11 +31,14 @@ Tracks and returns the current window dimensions (`width` and `height`), updatin
 
 ---
 
-# Clone the repo
-git clone https://github.com/your-username/react-hooks-playground.git
+## Clone the repo
+git clone https://github.com/your-username/react-hooks.git
 
-# Install dependencies
+## Live Link
+https://custom-react-hooks-mu.vercel.app/
+
+## Install dependencies
 npm install
 
-# Start development server
+## Start development server
 npm run dev
